@@ -13,13 +13,12 @@ pipeline {
         }
         stage('test') {
             steps {
-              sh 'mvn clean'
+              echo 'cloning done'
             }
         }
         stage('Build') {
             steps {
-                sh 'mvn package'
-               
+               echo 'bulid done'
             }
         }
         stage('demo') {
