@@ -13,13 +13,13 @@ pipeline {
         }
         stage('test') {
             steps {
-              sh 'mvn test'
+              sh 'mvn clean'
             }
         }
         stage('Build') {
             steps {
                 sh 'mvn package'
-                sh 'echo "this build ${BUILD_NUMBER}"'
+               
             }
         }
         stage('demo') {
